@@ -222,13 +222,12 @@
 
 .draw {
   width: 45vh;
-  min-height: 45vh;
-  max-height: auto;
+  height: 45vh;
   margin: auto;
 }
 
 .draw img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -242,6 +241,7 @@
 }
 
 .social .container {
+  height: fit-content;
   background: rgb(206, 11, 231);
   background: linear-gradient(125deg, rgba(206, 11, 231, 1) 0%, rgba(27, 162, 250, 1) 100%);
   width: fit-content;
@@ -257,9 +257,16 @@
 }
 
 .social .col {
+  height: fit-content;
   margin: 1.2vh;
   margin-left: 3.5vh;
   margin-right: 3.5vh;
+}
+
+.social .col a {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
 }
 
 .social i {
@@ -268,7 +275,7 @@
 }
 
 .bode .about {
-  height: 80vh;
+  height: fit-content;
   width: 100%;
   display: flex;
   text-align: center;
@@ -313,12 +320,12 @@
 }
 
 .descricao h1 {
-  font-size: 1.8em;
+  font-size: 5.5vh;
 }
 
 .descricao p {
   margin-right: 10vh;
-  font-size: 1.1em;
+  font-size: 2.9vh;
 }
 
 .social.container {
@@ -329,13 +336,15 @@
 
 .LangAndTools {
   width: 100%;
-  height: 20vh;
+  padding: 1.5em 0 1.5em 0;
+  height: fit-content;
   display: flex;
   background-color: #F5F5F5;
+  box-sizing: border-box;
 }
 
 .LangAndTools img {
-  width: 11vh;
+  width: 5vw;
   margin: auto;
 }
 
@@ -360,8 +369,13 @@
 }
 
 .bode2 .container h1 {
-  font-size: 3rem;
+  font-size: 10vh;
 }
+
+.bode2 .container p {
+  font-size: 3vh;
+}
+
 
 .bode2 .container .top {
   position: relative;
@@ -389,7 +403,6 @@
   height: 80vh;
   flex: 0 0 auto;
   transition: transform 0.3s ease;
-  filter: blur(2px);
 }
 
 li.selected {
@@ -407,7 +420,7 @@ li.selected {
   position: relative;
 }
 
-.i-status{
+.i-status {
   position: absolute;
   border-radius: 1.8em;
   font-size: .8rem;
@@ -417,21 +430,21 @@ li.selected {
   left: 4%;
 }
 
-.in-development{
+.in-development {
   background: linear-gradient(125deg, #CE0BE7, #1BA2FA);
   background-size: 200% 100%;
   animation: gradientAnimation 4s linear infinite;
 }
 
-.is-active{
+.is-active {
   background-color: #1BA2FA;
 }
 
-.is-planning{
+.is-planning {
   background-color: #1BA2FAbb;
 }
 
-.on-hold{
+.on-hold {
   background-color: #cd0be7bb;
 }
 
@@ -455,15 +468,19 @@ li.selected {
   cursor: default;
 }
 
-.i-description h4, .i-description p, .i-description a, .i-description .tag{
-  font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+.i-description h4,
+.i-description p,
+.i-description a,
+.i-description .tag {
+  font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fff;
 }
 
-.i-description h4{
+.i-description h4 {
   font-size: 1.2rem;
 }
-.i-description a{
+
+.i-description a {
   margin-top: auto;
   margin-left: 4px;
   color: rgba(255, 255, 255, 0.7);
@@ -471,11 +488,11 @@ li.selected {
   cursor: pointer;
 }
 
-.tags{
+.tags {
   margin-top: 0.4rem;
 }
 
-.tags .tag{
+.tags .tag {
   border-radius: 2px;
   text-align: center;
   margin: 0 10px 10px 0;
@@ -487,7 +504,7 @@ li.selected {
   line-height: 1.5;
 }
 
-.i-description p{
+.i-description p {
   margin-top: 0.6rem;
 }
 
@@ -509,4 +526,197 @@ footer {
 
 .copyright p {
   margin: 0;
+}
+
+@media only screen and (max-width: 930px) {
+  .header-container * {
+    display: none;
+  }
+
+  .ini {
+    height: 100vh;
+    width: 100%;
+    background: #f5f5f5;
+    display: block;
+  }
+
+  .ini .ttContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 38vh 0;
+    background: #f5f5f5;
+  }
+
+  .ini .ttContainer h2 {
+    width: 100%;
+    text-align: start;
+    font-size: 10vw;
+  }
+
+  .twContainer {
+    width: 80%;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .twContainer .text {
+    position: relative;
+    color: #232424;
+    font-size: 16vw;
+    font-weight: 600;
+  }
+
+  .twContainer .text.first-text {
+    color: #232424;
+  }
+
+  .text.sec-text {
+    border-right: 5px solid #232424;
+    color: #1BA2FA;
+    animation:
+      cursor 1s step-end infinite;
+  }
+
+  .ini .otContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 100%;
+    background: #f5f5f5;
+    justify-content: center;
+  }
+
+  .draw {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+    bottom: 0;
+    margin-bottom: 9vh;
+    z-index: 1;
+  }
+
+  .draw img {
+    width: 100%;
+    height: auto;
+  }
+
+  .social {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    bottom: 0;
+    margin-bottom: 8vh;
+    z-index: 2;
+  }
+
+  .LangAndTools {
+    width: 100%;
+    padding: 2vw 0 2vw 0;
+    height: fit-content;
+    display: flex;
+    background-color: #F5F5F5;
+    box-sizing: border-box;
+  }
+
+  .LangAndTools img {
+    width: 10vw;
+    margin: auto;
+  }
+
+  .social .col {
+    margin: 1.2vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .bode .about {
+    display: block;
+    height: fit-content;
+  }
+
+  .photo {
+    margin-bottom: 4vw;
+  }
+
+  .circular-border {
+    width: 51.5vw;
+    height: 51.5vw;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+  }
+
+  .circular-image {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .descricao {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .centro {
+    text-align: start;
+    margin-bottom: 10vh;
+  }
+
+  .descricao h1 {
+    width: min-content;
+    font-size: 5.5vh;
+    margin: auto;
+    line-height: 1.1;
+  }
+
+  .descricao p {
+    width: 100%;
+    margin-right: 0;
+    font-size: 2.9vh;
+  }
+
+  .bode2 .container {
+    position: relative;
+    width: 100%;
+    padding: 10vw;
+  }
+
+  .bode2 .container h1 {
+    line-height: 1.1;
+  }
+
+  .horizontal-carousel ul li .item {
+    width: 70vw;
+    height: 90vw;
+  }
+
+  .horizontal-carousel ul li {
+    width: 75vw;
+    height: 90vw;
+  }
+
+  .horizontal-carousel ul li .item .i-description {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .ini .ttContainer h2 {
+    font-size: 4vh;
+  }
+
+  .twContainer .text {
+    font-size: 8vh;
+  }
 }
